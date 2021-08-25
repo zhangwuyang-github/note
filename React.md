@@ -33,3 +33,7 @@
 5. 编译完成：编译完所有module后，得到每个模块的内容和其依赖关系
 6. 输出资源：根据入口文件和模块之间的依赖关系，组合成一个个chunk，再将每一个chunk转换成一个单独的文件加入到输出列表
 7. 完成：根据配置中的output确定输出文件及目录，将文件内容写入到文件系统
+
+# 生命周期
+
+getDefaultProps => getInitialState => componentWillMount => render => componentMount => componentWillReceiveProps => shouldComponentUpdate => componentWillUpdate => render => componentDidUpdate => componentWillOnMount

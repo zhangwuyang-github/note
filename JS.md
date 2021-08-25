@@ -160,3 +160,8 @@ Person.prototype.constructor === Person
 person01.__proto__ === Person.prototype
 ```
 
+# 垃圾回收机制
+
+将内存分为新生代和老生代；新生代为存活时间较短的对象，老生代为存活时间较长或常驻内存的对象。
+
+新生代使用scavenge算法，将区域分为使用空间from、闲置空间to两个空间。
