@@ -165,3 +165,16 @@ person01.__proto__ === Person.prototype
 将内存分为新生代和老生代；新生代为存活时间较短的对象，老生代为存活时间较长或常驻内存的对象。
 
 新生代使用scavenge算法，将区域分为使用空间from、闲置空间to两个空间。
+
+# for in 和 for of 的区别
+
+```javascript
+const obj = {name: 'bob', age: 12, className: '一'};
+const arr = [1, 3, 4];
+for (a in obj) {
+  console.log(a); // name, age, className; for in 用于遍历对象的key
+}
+for (b in arr) {
+  console.log(b); // 1, 3, 4; for of 用于遍历数组
+}
+```
